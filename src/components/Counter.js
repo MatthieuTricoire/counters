@@ -1,20 +1,24 @@
-const Counter = ({ counter, setCounter, id }) => {
+const Counter = ({ counter, setCounter, index }) => {
   const increment = () => {
     const newTab = [...counter];
-    newTab[id] = newTab[id] + 1;
+    newTab[index] = newTab[index] + 1;
     setCounter(newTab);
   };
 
   const decrement = () => {
     const newTab = [...counter];
-    newTab[id] = newTab[id] - 1;
+    newTab[index] = newTab[index] - 1;
     setCounter(newTab);
   };
   return (
     <div className="counter">
-      <button onClick={decrement}>-</button>
-      <div className="result">{counter[id]}</div>
-      <button onClick={increment}>+</button>
+      <button className="btn counter__btn" onClick={decrement}>
+        -
+      </button>
+      <div className="counter__result">{counter}</div>
+      <button className="btn counter__btn" onClick={increment}>
+        +
+      </button>
     </div>
   );
 };

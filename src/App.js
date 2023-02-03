@@ -8,13 +8,10 @@ function App() {
   const [counter, setCounter] = useState([]);
 
   const addCounter = () => {
-    let id = counter.length;
-    console.log(id);
-    if (id < 3) {
+    if (counter.length < 3) {
       const newTab = [...counter];
       newTab.push(0);
       setCounter(newTab);
-      <Counter counter={counter} setCounter={setCounter} id={id} />;
     } else {
       alert("max 3 counters");
     }
@@ -22,7 +19,12 @@ function App() {
 
   return (
     <div className="main">
-      <button onClick={addCounter}>Add counter</button>
+      <button onClick={addCounter} className="btn">
+        Add counter
+      </button>
+      {counter.map((elem, index) => {
+        <Counter counter={counter} setCounter={setCounter} index={index} />;
+      })}
     </div>
   );
 }
