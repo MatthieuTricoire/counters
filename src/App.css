@@ -1,0 +1,120 @@
+/*? Fonts import  */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+/*? General  */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Montserrat;
+  color: hsla(0, 0%, 0%, 1);
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  font-family: inherit;
+  border: 0;
+  padding: 0;
+}
+
+/*? Utility */
+
+.row {
+  display: flex;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.container {
+  max-width: 100%;
+  width: 1024px;
+  margin: 0 auto;
+}
+.btn--disabled {
+  pointer-events: none;
+  opacity: 20%;
+}
+/*? Header  */
+
+header {
+  height: 100px;
+  padding-block: 20px;
+  padding-left: 40px;
+  align-items: center;
+  gap: 40px;
+}
+.header__logo {
+  height: 100%;
+}
+
+/*? Section  */
+
+section {
+  margin-block: 40px;
+  justify-content: center;
+}
+
+/** Counter  */
+.counter {
+  align-items: center;
+}
+.counter__main {
+  align-items: center;
+  gap: 15px;
+  margin-inline: 30px;
+}
+.counter__main__result {
+  background-color: hsla(249, 61%, 55%, 1);
+  font-size: 2.6rem;
+  color: white;
+  width: 100px;
+  height: 100px;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  background-color: hsla(249, 61%, 55%, 1);
+  border-radius: 20px;
+  font-size: 32px;
+  font-weight: 600;
+  color: white;
+}
+button:hover {
+  background-color: rgb(67, 49, 170);
+}
+button:active {
+  scale: 1.2;
+}
+
+.counter__btn__action {
+  background-color: transparent;
+  color: black;
+  font-size: 3rem;
+}
+.counter__btn__action:hover {
+  background-color: transparent;
+  color: hsla(249, 61%, 55%, 1);
+}
+
+.counter__reset {
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.btn--large {
+  padding: 0.2em 0.4em;
+}
